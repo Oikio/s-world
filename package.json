@@ -1,0 +1,21 @@
+{
+  "name": "s-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d dist --source-maps inline",
+    "browser": "browserify src/index.js -t babelify --debug -w --outfile dist/browser.js",
+    "watch": "watch 'npm run browser' src/"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.3.17",
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
+    "browserify": "^12.0.1",
+    "watch": "^0.17.1"
+  }
+}
